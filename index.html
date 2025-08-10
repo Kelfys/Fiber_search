@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>📡 Toolkit Fibra Óptica</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🛠️ Toolkit Fibra Óptica</h1>
+
+        <form id="fibraForm">
+            <fieldset>
+                <legend>🧰 Dados da Fibra</legend>
+
+                <label for="fiberNumber">Número da fibra 🎯:</label>
+                <input type="number" id="fiberNumber" name="fiberNumber" min="1" required />
+
+                <label for="cableType">Tipo do cabo (fibras) 📦:</label>
+                <select id="cableType" name="cableType" required>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="48">48</option>
+                    <option value="72">72</option>
+                    <option value="144">144</option>
+                </select>
+
+                <label for="fibersPerTube">Fibras por tubo 🧪:</label>
+                <select id="fibersPerTube" name="fibersPerTube" required>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>📝 Dados opcionais</legend>
+
+                <label for="projectName">Nome do projeto 🏷️:</label>
+                <input type="text" id="projectName" name="projectName" placeholder="Ex: Projeto Alfa" />
+
+                <label for="cableNumber">Número do cabo 🔢:</label>
+                <input type="text" id="cableNumber" name="cableNumber" placeholder="Ex: Cabo 01" />
+
+                <label for="boxName">Nome da caixa 📦:</label>
+                <input type="text" id="boxName" name="boxName" placeholder="Ex: Caixa A" />
+            </fieldset>
+
+            <button type="submit">🔍 Consultar Fibra</button>
+        </form>
+
+        <section id="result" class="hidden">
+            <h2>🎯 Resultado</h2>
+            <p><strong>Posição da fibra:</strong> <span id="fiberPosition"></span></p>
+            <p><strong>Cor da fibra:</strong> <span id="fiberColor"></span></p>
+            <p><strong>Número da fibra:</strong> <span id="fiberNum"></span></p>
+            <p><strong>Número do grupo:</strong> <span id="groupNumber"></span></p>
+            <p><strong>Cor do grupo:</strong> <span id="groupColor"></span></p>
+        </section>
+
+        <section id="historySection">
+            <h2>📜 Histórico de Fibras</h2>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>Projeto</th>
+                        <th>Cabo</th>
+                        <th>Caixa</th>
+                        <th>Fibra</th>
+                        <th>Posição</th>
+                        <th>Cor Fibra</th>
+                        <th>Grupo</th>
+                        <th>Cor Grupo</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="buttons">
+                <button id="exportCSV">📥 Exportar CSV</button>
+                <button id="exportPDF">📥 Exportar PDF</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
