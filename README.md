@@ -25,4 +25,4 @@ Um toolkit simples e amigável para técnicos de fibra óptica, que ajuda a iden
 
 ---
 
-Made with ❤️ por você, pra facilitar o dia a dia dos técnicos de fibra!  
+Feito por Bruno Araujo, pra facilitar o dia a dia dos técnicos de fibra!  
